@@ -1,5 +1,5 @@
 //==========================================================
-//	‘f”@‰ü—Ç”Å
+//	‘f”@‰ü—Ç”Å2
 //==========================================================
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> // printf()
@@ -14,19 +14,21 @@ int main()
     prime[primePtr++] = 2;
     for (int n = 3; n <= N; n += 2) {
         int i;
-        for (i = 0; i < primePtr; i++) {
+        bool isPrimeNumber = true;
+        for (i = 0; counter++, prime[i] * prime[i] <= n; i++) {
             counter++;
             if (n % prime[i] == 0) {
+                isPrimeNumber = false;
                 break;
             }
         }
-        if (i == primePtr) {
+        if (isPrimeNumber) {
             prime[primePtr++] = n;
         }
     }
     for (int i = 0; i < primePtr; i++) {
         printf("%d ", prime[i]);
     }
-    printf("\nœZ‚ğs‚Á‚½‰ñ”:%lu\n", counter);
+    printf("\næœZ‚ğs‚Á‚½‰ñ”:%lu\n", counter);
     return 0;
 }
