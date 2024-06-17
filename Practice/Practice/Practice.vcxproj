@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MaxOfThree_Test.cpp" />
+    <ClCompile Include="ArraySample.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8481526f-8fd5-44ea-8ee3-2d49d329e108}</ProjectGuid>
-    <RootNamespace>MaxOfThree</RootNamespace>
+    <ProjectGuid>{f6edbcdf-f7ed-4293-b840-a3d254f55719}</ProjectGuid>
+    <RootNamespace>Practice</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
