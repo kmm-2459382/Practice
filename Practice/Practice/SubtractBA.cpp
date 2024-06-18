@@ -18,6 +18,7 @@ int main(int argc, char* argv[])
 		printf("b‚Ì’l:");
 		scanf("%d", &b);
 	} while (b <= a);
+	1
 
 	printf("%d - %d = %d\n", b, a, b - a);
 	return 0;
