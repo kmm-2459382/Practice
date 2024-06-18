@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DaysInYear.cpp">
+    <ClCompile Include="MaxOfFour.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
