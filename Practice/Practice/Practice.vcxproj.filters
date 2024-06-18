@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MinOfThree.cpp">
+    <ClCompile Include="MinOfFour.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
