@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SumOfN_PrintExpression.cpp">
+    <ClCompile Include="SumOfN_GaussMethod.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
