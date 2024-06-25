@@ -54,19 +54,19 @@ void print()
     static int solution_count = 0;  // 解答の数をカウントする静的変数
 
     printf("解答 %d:\n", ++solution_count);
-    printf("+-+-+-+-+-+-+-+-+\n");
+    printf("+---+---+---+---+---+---+---+---+\n");
 
     for (int row = 0; row < FIELD_SIZE; row++) {
         printf("|");
         for (int col = 0; col < FIELD_SIZE; col++) {
             if (pos[col] == row) {
-                printf("Q|");
+                printf(" Q |");
             }
             else {
-                printf(" |");
+                printf("   |");
             }
         }
-        printf("\n+-+-+-+-+-+-+-+-+\n");
+        printf("\n+---+---+---+---+---+---+---+---+\n");
     }
     printf("\n");
 }
