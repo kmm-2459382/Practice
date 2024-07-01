@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dddef7bd-2d99-41f9-91f9-6edbb37990d2}</ProjectGuid>
-    <RootNamespace>InsertionSortSample</RootNamespace>
+    <ProjectGuid>{314089cb-7c7f-4104-8835-7067689deaf5}</ProjectGuid>
+    <RootNamespace>ShellSortSample</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InsertionSortSample.cpp" />
+    <ClCompile Include="ShellSortSample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

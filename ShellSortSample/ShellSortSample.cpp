@@ -1,12 +1,12 @@
 //=========================================================
-//	単純挿入ソート
+//	シェルソート
 //==========================================================
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>   // printf(),scanf()
 #include <stdlib.h>  // srand(),rand()
 #include <time.h>    // time()
 // 関数プロトタイプ
-void InsertionSort(int array[], int arraySize);
+void ShellSort(int array[], int arraySize);
 int getRandRange(int min, int max);
 void dumpArray(const int array[], int arraySize);
 
@@ -31,7 +31,7 @@ int main()
 			array[i] = getRandRange(1, 100);
 		}
 		dumpArray(array, arraySize);
-		InsertionSort(array, arraySize);
+		ShellSort(array, arraySize);
 		printf("昇順にソートしました\n");
 		dumpArray(array, arraySize);
 
@@ -40,15 +40,17 @@ int main()
 	return 0;
 }
 
-void InsertionSort(int array[], int arraySize)
+void ShellSort(int array[], int arraySize)
 {
-	for (int i = 1; i < arraySize; i++) {
-		int tmp = array[i];
-		int j;
-		for (j = i; j > 0 && array[j - 1] > tmp; j--) {
-			array[j] = array[j - 1];
+	for (int h = arraySize / 2; h > 0; h /= 2) {
+		for (int i = h; i < arraySize; i++) {
+			int tmp = array[i];
+			int j;
+			for (j = i - h; j >= 0 && array[j] > tmp; j -= h) {
+				array[j + h] = array[j];
+			}
+			array[j + h] = tmp;
 		}
-		array[j] = tmp;
 	}
 }
 
