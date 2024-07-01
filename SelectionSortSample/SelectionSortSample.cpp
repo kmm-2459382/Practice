@@ -1,12 +1,12 @@
 //=========================================================
-//	単純交換ソート 改良2
+//	単純選択ソート
 //==========================================================
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>   // printf(),scanf()
 #include <stdlib.h>  // srand(),rand()
 #include <time.h>    // time()
 // 関数プロトタイプ
-void BubbleSort(int array[], int arraySize);
+void SelectionSort(int array[], int arraySize);
 int getRandRange(int min, int max);
 void dumpArray(const int array[], int arraySize);
 // 交換マクロ
@@ -33,7 +33,7 @@ int main()
 			array[i] = getRandRange(1, 100);
 		}
 		dumpArray(array, arraySize);
-		BubbleSort(array, arraySize);
+		SelectionSort(array, arraySize);
 		printf("昇順にソートしました\n");
 		dumpArray(array, arraySize);
 
@@ -42,18 +42,18 @@ int main()
 	return 0;
 }
 
-void BubbleSort(int array[], int arraySize)
+void SelectionSort(int array[], int arraySize)
 {
-	int k = 0;
-	while (k < arraySize - 1) {
-		int last = arraySize - 1;
-		for (int j = arraySize - 1; j > k; j--) {
-			if (array[j - 1] > array[j]) {
-				swap(int, array[j - 1], array[j]);
-				last = j;
+	for (int i = 0; i < arraySize - 1; i++) {
+		int min = i;
+		for (int j = i + 1; j < arraySize; j++) {
+			if (array[min] > array[j]) {
+				min = j;
 			}
 		}
-		k = last;
+		if (min != i) {
+			swap(int, array[i], array[min]);
+		}
 	}
 }
 

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b5f3502e-d6de-4809-811b-951b70bf719c}</ProjectGuid>
-    <RootNamespace>BubbleSortSampleImprove2</RootNamespace>
+    <ProjectGuid>{4a379aff-bc0a-46cb-9d5e-e66fe85b84bb}</ProjectGuid>
+    <RootNamespace>SelectionSortSample</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BubbleSortSample_Improve2.cpp" />
+    <ClCompile Include="SelectionSortSample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
