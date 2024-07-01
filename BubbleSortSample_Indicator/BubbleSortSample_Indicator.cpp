@@ -10,6 +10,7 @@
 void BubbleSort(int array[], int arraySize);
 int getRandRange(int min, int max);
 void dumpArray(const int array[], int arraySize);
+void dumpArrayWithMarks(const int array[], int arraySize, int idx1, int idx2, char mark1, char mark2);
 
 // 交換マクロ
 #define swap(type,a,b)	do{type tmp=a; a=b; b=tmp;}while(false)
@@ -50,17 +51,21 @@ void BubbleSort(int array[], int arraySize)
 	int comparisons = 0;
 	int swaps = 0;
 	for (int i = 0; i < arraySize - 1; i++) {
+		printf("パス %d:\n", i + 1);
 		for (int j = arraySize - 1; j > i; j--) {
 			comparisons++;
 			if (array[j - 1] > array[j]) {
 				swap(int, array[j - 1], array[j]);
 				swaps++;
-				dumpArray(array, arraySize); // 交換ごとに配列を表示
+				dumpArrayWithMarks(array, arraySize, j - 1, j, '+', ' '); // 交換を表示
+			}
+			else {
+				dumpArrayWithMarks(array, arraySize, j - 1, j, '-', ' '); // 比較を表示
 			}
 		}
 	}
-	printf("比較回数: %d\n", comparisons);
-	printf("交換回数: %d\n", swaps);
+	printf("比較は %d 回でした\n", comparisons);
+	printf("交換は %d 回でした\n", swaps);
 }
 
 void dumpArray(const int array[], int arraySize)
@@ -68,6 +73,22 @@ void dumpArray(const int array[], int arraySize)
 	for (int i = 0; i < arraySize; i++) {
 		printf("array[%d] = %d\n", i, array[i]);
 	}
+}
+
+void dumpArrayWithMarks(const int array[], int arraySize, int idx1, int idx2, char mark1, char mark2)
+{
+	for (int i = 0; i < arraySize; i++) {
+		if (i == idx1) {
+			printf("%3d%c", array[i], mark1);
+		}
+		else if (i == idx2) {
+			printf("%3d%c", array[i], mark2);
+		}
+		else {
+			printf("%3d   ", array[i]);
+		}
+	}
+	printf("\n");
 }
 
 int getRandRange(int min, int max)
