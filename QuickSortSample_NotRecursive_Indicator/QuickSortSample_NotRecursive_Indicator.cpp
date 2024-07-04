@@ -2,14 +2,14 @@
 #include <stdio.h>   // printf(),scanf()
 #include <stdlib.h>  // srand(),rand()
 #include <time.h>    // time()
-#include "IntStack.h" // Include the IntStack header
+#include "IntStack.h" // IntStackヘッダーをインクルード
 
-// Function prototypes
+// 関数プロトタイプ
 void QuickSort(int array[], int left, int right);
 void dumpArray(const int array[], int arraySize);
 int getRandRange(int min, int max);
 
-// Swap macro
+// 交換マクロ
 #define swap(type,a,b)   do{ type tmp=a; a=b; b=tmp; }while(false)
 
 int main()
@@ -42,7 +42,7 @@ int main()
     return 0;
 }
 
-// Modify this function to show the process of pushing, popping, and partitioning
+// プッシュ、ポップ、分割の様子を表示するようにQuickSort関数を修正
 void QuickSort(int array[], int left, int right)
 {
     IntStack stk;
@@ -67,7 +67,7 @@ void QuickSort(int array[], int left, int right)
                 pr--;
             }
         } while (pl <= pr);
-        dumpArray(array, right - left + 1); // Display the array after partitioning
+        dumpArray(array, right - left + 1); // 分割後の配列を表示
         if (left < pr) {
             Push(&stk, left);
             Push(&stk, pr);

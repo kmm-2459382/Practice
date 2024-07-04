@@ -1,16 +1,16 @@
 #pragma once
 
-// Enum for stack operations result
+// スタック操作結果の列挙型
 typedef enum {
     SUCCESS,
     INITIALIZE_FAIL,
     PUSH_NO_SPACE,
     POP_NO_DATA,
     PEEK_NO_DATA,
-    SEARCH_NOT_FOUND = -1 // Typically -1
+    SEARCH_NOT_FOUND = -1 // 通常は-1
 } IntStackResult;
 
-// Stack structure
+// スタック構造体
 typedef struct {
     int max;
     int ptr;
