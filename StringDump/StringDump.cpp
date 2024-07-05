@@ -20,7 +20,7 @@ void str_dump(const char* str)
 	for (; *str != '\0'; str++) {
 		unsigned int c = *str;
 		printf("%c %0*X ", c, w, c);
-		for (int i = CHAR_BIT - 1; i >>= 0; i--) {
+		for (int i = CHAR_BIT - 1; i >= 0; i--) {
 			putchar(((c >> i) & 1) != 0 ? '1' : '0');
 		}
 		putchar('\n');
